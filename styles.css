@@ -830,6 +830,51 @@ img { max-width: 100%; display: block; }
 .footer-bottom p { font-size: 0.8rem; color: var(--muted); }
 
 /* ─────────────────────────────────────────────
+   VIDEO SECTION
+   ───────────────────────────────────────────── */
+.video-section { padding-top: 0; }
+
+.video-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+  background: #000;
+  max-width: 900px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sound-toggle {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+  z-index: 2;
+}
+.sound-toggle:hover { background: rgba(224,32,32,0.75); }
+.sound-toggle svg { width: 18px; height: 18px; }
+
+/* ─────────────────────────────────────────────
    SCROLL REVEAL
    ───────────────────────────────────────────── */
 .reveal {

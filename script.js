@@ -2,6 +2,20 @@
    RADIUS — script.js
    ───────────────────────────────────────────── */
 
+/* ── Video: autoplay muted, sound toggle ── */
+const productVideo  = document.getElementById('productVideo');
+const soundToggle   = document.getElementById('soundToggle');
+const iconMuted     = document.getElementById('iconMuted');
+const iconSound     = document.getElementById('iconSound');
+
+if (soundToggle && productVideo) {
+  soundToggle.addEventListener('click', () => {
+    productVideo.muted = !productVideo.muted;
+    iconMuted.style.display = productVideo.muted ? '' : 'none';
+    iconSound.style.display = productVideo.muted ? 'none' : '';
+  });
+}
+
 /* ── Navbar: add class on scroll ── */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
