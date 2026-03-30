@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radius — Smart Cigarette Inventory Counter</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">RADIUS</a>
+      <ul class="nav-links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#who">Who It's For</a></li>
+        <li><a href="#specs">Specs</a></li>
+        <li><a href="#contact" class="nav-cta">Order Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#how-it-works" class="mobile-link">How It Works</a>
+    <a href="#features" class="mobile-link">Features</a>
+    <a href="#who" class="mobile-link">Who It's For</a>
+    <a href="#specs" class="mobile-link">Specs</a>
+    <a href="#contact" class="mobile-link cta">Order Now</a>
+  </div>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Introducing</span>
+      <h1 class="hero-title">Never Lose<br /><span class="accent">Count.</span></h1>
+      <p class="hero-sub">
+        Radius is an intelligent cigarette inventory counter built for gas stations
+        and convenience stores. Know your stock in real time — automatically.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-primary">Order Now</a>
+        <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <!-- Animated product mockup -->
+      <div class="product-mockup">
+        <div class="product-tray">
+          <div class="cigarette-pack p1"></div>
+          <div class="cigarette-pack p2"></div>
+          <div class="cigarette-pack p3"></div>
+          <div class="cigarette-pack p4"></div>
+          <div class="cigarette-pack p5"></div>
+          <div class="cigarette-pack p6"></div>
+          <div class="cigarette-pack p7"></div>
+          <div class="cigarette-pack p8"></div>
+          <div class="cigarette-pack p9"></div>
+          <div class="cigarette-pack p10"></div>
+        </div>
+        <div class="product-base">
+          <div class="display-screen">
+            <span class="display-label">STOCK</span>
+            <span class="display-count" id="heroCount">10</span>
+          </div>
+          <div class="product-brand">RADIUS</div>
+        </div>
+      </div>
+      <p class="mockup-caption">Tap a pack to see it in action &darr;</p>
+      <div class="demo-btns">
+        <button class="demo-btn" id="removeBtn">- Remove Pack</button>
+        <button class="demo-btn add" id="addBtn">+ Add Pack</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STATS BAR ─── -->
+  <section class="stats-bar">
+    <div class="stat">
+      <span class="stat-num">0<span class="accent">s</span></span>
+      <span class="stat-label">Manual counting required</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">Real<span class="accent">-</span>time</span>
+      <span class="stat-label">Live inventory display</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">24<span class="accent">/</span>7</span>
+      <span class="stat-label">Always-on tracking</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">100<span class="accent">%</span></span>
+      <span class="stat-label">Automatic detection</span>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─── -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <span class="section-eyebrow">Simple by design</span>
+      <h2 class="section-title">How Radius Works</h2>
+      <p class="section-sub">Three steps. Zero effort. Complete visibility.</p>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">01</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="16" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M16 16V12a8 8 0 0116 0v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="24" cy="28" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Place Radius on the Shelf</h3>
+          <p>Set up your Radius unit where you stock cigarettes. Stack your packs on the tray as normal. Setup takes under a minute.</p>
+        </div>
+
+        <div class="step-arrow">&#8594;</div>
+
+        <div class="step reveal">
+          <div class="step-num">02</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M14 24h20M24 14v20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Packs Are Detected Automatically</h3>
+          <p>Radius detects every pack added or removed in real time using built-in sensors — no scanning, no barcodes, no manual input.</p>
+        </div>
+
+        <div class="step-arrow">&#8594;</div>
+
+        <div class="step reveal">
+          <div class="step-num">03</div>
+          <div class="step-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="14" width="36" height="22" rx="4" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M15 25h6M27 25h6M15 31h18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <rect x="18" y="22" width="12" height="6" rx="1" fill="currentColor" opacity=".2"/>
+              <text x="21" y="27.5" font-size="5" fill="currentColor" font-family="monospace">09</text>
+            </svg>
+          </div>
+          <h3>Read the Count at a Glance</h3>
+          <p>The bright LED display always shows your current stock. Know exactly when to reorder — without leaving the counter or opening a spreadsheet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURES ─── -->
+  <section class="section section-dark" id="features">
+    <div class="container">
+      <span class="section-eyebrow">Built for retail</span>
+      <h2 class="section-title">Everything You Need</h2>
+      <p class="section-sub">Radius was designed from the ground up for high-traffic retail environments.</p>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5"/><path d="M24 14v10l6 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Real-Time Detection</h3>
+          <p>Stock count updates the instant a pack is added or removed — no delays, no guesswork.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M10 38V22l14-12 14 12v16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="18" y="28" width="12" height="10" rx="1" stroke="currentColor" stroke-width="2.5"/></svg>
+          </div>
+          <h3>Zero Setup Complexity</h3>
+          <p>Plug in, stack your packs, and go. No software, no Wi-Fi required, no training needed.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="32" height="18" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M16 18V14a8 8 0 0116 0v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="27" r="2" fill="currentColor"/></svg>
+          </div>
+          <h3>Theft Awareness</h3>
+          <p>Unexpected drops in count happen instantly on the display — alerting staff to potential theft in real time.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="24" r="4" fill="currentColor" opacity=".3"/></svg>
+          </div>
+          <h3>Bright LED Display</h3>
+          <p>High-visibility LED readout is easy to read from across the store, even in bright or dim lighting.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="12" y="8" width="24" height="32" rx="3" stroke="currentColor" stroke-width="2.5"/><path d="M18 16h12M18 22h12M18 28h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Reduces Over-Ordering</h3>
+          <p>Always know exactly how many packs remain. Stop ordering too much or running out at peak hours.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M8 40l8-12 8 6 8-18 8 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Compact &amp; Durable</h3>
+          <p>Sleek, low-profile design fits neatly on any shelf or countertop. Built tough for daily retail use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHO IT'S FOR ─── -->
+  <section class="section" id="who">
+    <div class="container">
+      <span class="section-eyebrow">Our customers</span>
+      <h2 class="section-title">Built for Businesses Like Yours</h2>
+      <p class="section-sub">Radius is the perfect solution for any high-volume tobacco retailer.</p>
+
+      <div class="who-grid">
+        <div class="who-card reveal">
+          <div class="who-icon">⛽</div>
+          <h3>Gas Stations</h3>
+          <p>One of the highest-volume cigarette retailers in the country. Radius keeps your cashiers from constantly checking stock during a busy rush.</p>
+        </div>
+        <div class="who-card reveal">
+          <div class="who-icon">🏪</div>
+          <h3>Convenience Stores</h3>
+          <p>Maximize shelf efficiency and cut down on time spent manually inventorying your tobacco section multiple times per shift.</p>
+        </div>
+        <div class="who-card reveal">
+          <div class="who-icon">🚬</div>
+          <h3>Tobacco &amp; Smoke Shops</h3>
+          <p>Track multiple SKUs and keep your most popular products always in sight and in stock.</p>
+        </div>
+        <div class="who-card reveal">
+          <div class="who-icon">🏬</div>
+          <h3>Grocery &amp; Drug Stores</h3>
+          <p>Integrate Radius into any tobacco display area without disrupting your existing store layout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SPECS ─── -->
+  <section class="section section-dark" id="specs">
+    <div class="container container-narrow">
+      <span class="section-eyebrow">Under the hood</span>
+      <h2 class="section-title">Technical Specifications</h2>
+
+      <div class="specs-table">
+        <div class="spec-row">
+          <span class="spec-label">Display</span>
+          <span class="spec-value">High-brightness LED numeric display</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Detection Method</span>
+          <span class="spec-value">Automatic sensor — no barcodes or scanning</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Counting Range</span>
+          <span class="spec-value">0 – 99 packs</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Response Time</span>
+          <span class="spec-value">Instant (real-time)</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Power</span>
+          <span class="spec-value">Standard AC adapter (included)</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Form Factor</span>
+          <span class="spec-value">Compact countertop / shelf unit</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Build</span>
+          <span class="spec-value">Durable matte black housing</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-label">Connectivity Required</span>
+          <span class="spec-value">None — fully standalone</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT / ORDER ─── -->
+  <section class="section" id="contact">
+    <div class="container">
+      <span class="section-eyebrow">Get started</span>
+      <h2 class="section-title">Order Radius Today</h2>
+      <p class="section-sub">Fill out the form below and we'll reach out with pricing and availability for your store.</p>
+
+      <div class="contact-wrapper">
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="business">Business Name *</label>
+              <input type="text" id="business" name="business" placeholder="Smith's Gas &amp; Go" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="business-type">Business Type</label>
+            <select id="business-type" name="business-type">
+              <option value="">Select your business type...</option>
+              <option>Gas Station</option>
+              <option>Convenience Store</option>
+              <option>Tobacco / Smoke Shop</option>
+              <option>Grocery Store</option>
+              <option>Drug Store / Pharmacy</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="units">How many Radius units are you interested in?</label>
+            <select id="units" name="units">
+              <option value="">Select quantity...</option>
+              <option>1 unit</option>
+              <option>2–5 units</option>
+              <option>6–10 units</option>
+              <option>10+ units</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message / Questions</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your store or any questions you have..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Inquiry</button>
+          <p class="form-note">We typically respond within 1 business day.</p>
+        </form>
+
+        <div class="contact-info reveal">
+          <div class="contact-block">
+            <div class="contact-icon">✉</div>
+            <div>
+              <h4>Email Us</h4>
+              <!-- Replace with your real email -->
+              <a href="mailto:sales@radiuscounter.com">sales@radiuscounter.com</a>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Call Us</h4>
+              <!-- Replace with your real phone number -->
+              <a href="tel:+15550000000">(555) 000-0000</a>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Mon – Fri, 9 AM – 6 PM</p>
+            </div>
+          </div>
+          <div class="pricing-teaser">
+            <h4>Pricing</h4>
+            <p>Contact us for current unit pricing, bulk discounts, and wholesale rates.</p>
+            <a href="#contactForm" class="btn btn-ghost btn-sm">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo">RADIUS</span>
+        <p>The intelligent cigarette inventory counter for modern retail.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#specs">Specs</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Radius. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
